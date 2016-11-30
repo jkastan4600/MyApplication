@@ -165,7 +165,8 @@
         android:layout_below="@+id/info_fields_area"
         android:layout_centerHorizontal="true"
         tools:textColorHint="@android:color/holo_red_dark"
-        android:onClick="accountCreatedDialog"
+        android:onClick="createAccountButton"
+
         />
 
 </RelativeLayout>
