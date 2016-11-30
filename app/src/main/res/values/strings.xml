@@ -19,4 +19,7 @@
     <string name="first_name_text"><u>First Name</u></string>
     <string name="last_name_text"><u>Last Name</u></string>
     <string name="create_account_text">Create Account</string>
+    <string name="login_button">Login</string>
+    <string name="create_new_account_button">Create new account</string>
+    <string name="welcome_text">WELCOME!</string>
 </resources>
