@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jkast.myapplication.MainActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/acct_create_banner"
+        android:baselineAligned="false">
+
+        <TextView
+            android:text="@string/account_creation_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/creation_banner"
+            android:textSize="36sp"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:layout_below="@+id/acct_create_banner"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:id="@+id/info_fields_area"
+        android:weightSum="1"
+        android:layout_below="@+id/acct_create_banner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="83dp"
+        android:layout_height="170dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/acct_create_banner"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:baselineAligned="false"
+            android:weightSum="1"
+            android:layout_weight="5.67"
+            android:id="@+id/displaynames">
+
+            <TextView
+                android:text="@string/first_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Fname_display"
+                android:textSize="20sp"
+                android:layout_weight="0.38"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:text="@string/last_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Lname_display"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="18dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:text="@string/email_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/email_display"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="19dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:text="@string/password_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/password_display"
+
+                android:layout_marginTop="18dp"
+                android:textSize="20sp"
+                android:layout_weight="2.43" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="27dp"
+            android:layout_marginEnd="27dp"
+            android:id="@+id/enternames"
+            android:weightSum="1">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/fname_enter_area"
+                android:layout_weight="0.08"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:keepScreenOn="true"
+                android:layout_marginLeft="15dp"
+                android:background="@android:drawable/editbox_background_normal" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/lname_enter_area"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_marginTop="9dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/email_enter_area"
+                android:layout_weight="0.06"
+                android:outlineProvider="background"
+                android:layout_marginLeft="15dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/password_enter_area"
+                android:layout_height="wrap_content"
+                android:password="true"
+                android:layout_marginLeft="15dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_marginTop="9dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:text="@string/create_account_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:id="@+id/button6"
+        android:layout_below="@+id/info_fields_area"
+        android:layout_centerHorizontal="true"
+        tools:textColorHint="@android:color/holo_red_dark"
+        android:onClick="showDialog"
+        />
+
+</RelativeLayout>
