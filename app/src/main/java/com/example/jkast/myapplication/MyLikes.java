@@ -3,11 +3,11 @@ package com.example.jkast.myapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MyPreferences extends AppCompatActivity {
+public class MyLikes extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_preferences);
+        setContentView(R.layout.activity_my_likes);
     }
 }

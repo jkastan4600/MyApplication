@@ -1,9 +1,7 @@
 package com.example.jkast.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void showDialog(View view){
-        Toast.makeText(MainActivity.this,"Account successfully created.", Toast.LENGTH_LONG).show();
-    } // suh suh suh
+    //public void showDialog(View view){
+     //   Toast.makeText(MainActivity.this,"Account successfully created.", Toast.LENGTH_LONG).show();
+    //} // suh suh suh
 }

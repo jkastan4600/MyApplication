@@ -22,4 +22,8 @@
     <string name="login_button">Login</string>
     <string name="create_new_account_button">Create new account</string>
     <string name="welcome_text">WELCOME!</string>
+    <string name="animals_text">Animals</string>
+    <string name="arts_crafts_text"><![CDATA[Arts & Crafts]]></string>
+    <string name="agriculture_text">Agriculture</string>
+    <string name="archaeology_text">Archaeology</string>
 </resources>
