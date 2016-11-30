@@ -14,5 +14,5 @@ public class MainActivity extends AppCompatActivity {
     }
     public void showDialog(View view){
         Toast.makeText(MainActivity.this,"Account successfully created.", Toast.LENGTH_LONG).show();
-    }
+    } // suh suh suh
 }
