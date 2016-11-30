@@ -47,126 +47,205 @@
                         android:text="Architecture"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox19"
+                        android:id="@+id/architecture"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:text="@string/biology_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Biology"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/books_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox18"
+                        android:id="@+id/Books"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:text="@string/competition_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Competition"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/culture_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox17"
+                        android:id="@+id/Culture"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/current_events_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox16"
+                        android:id="@+id/CurrentEvents"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/dating_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox15"
+                        android:id="@+id/Dating"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/disease_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox14"
+                        android:id="@+id/Disease"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/drama_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox13"
+                        android:id="@+id/Drama"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/economics_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox12"
+                        android:id="@+id/Economics"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/engineering_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox11"
+                        android:id="@+id/Engineering"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/fitness_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox10"
+                        android:id="@+id/Fitness"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/flowers_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox9"
+                        android:id="@+id/Flowers"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/fund_raising_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox8"
+                        android:id="@+id/FundRaising"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/gardens_gardening_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox7"
+                        android:id="@+id/GardensGardening"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/government_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox6"
+                        android:id="@+id/Government"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/health_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox5"
+                        android:id="@+id/Health"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/hobbies_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox4"
+                        android:id="@+id/Hobbies"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/investing_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox42"
+                        android:id="@+id/Investing"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/lunch_outings_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox41"
+                        android:id="@+id/LunchOutings"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/military_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Military"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/movies_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Movies"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/nature_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Nature"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/politics_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Politics"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/sports_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Sports"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/technology_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Technology"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/the_colonnades_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/TheColonnades"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/uva_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/UVA"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/weather_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Weather"
                         android:textSize="20sp" />
                 </LinearLayout>
 
@@ -190,130 +269,215 @@
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="Aviation"
+                        android:text="@string/aviation_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox37"
+                        android:id="@+id/aviation"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/bird_watching_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox36"
+                        android:id="@+id/BirdWatching"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/bombs_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox35"
+                        android:id="@+id/Bombs"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/collecting_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox34"
+                        android:id="@+id/Collecting"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/crime_true_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox33"
+                        android:id="@+id/Crime"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/dance_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox32"
+                        android:id="@+id/Dance"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/dermatology_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox31"
+                        android:id="@+id/Dermatology"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/doctors_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox30"
+                        android:id="@+id/Doctors"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/ecology_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox29"
+                        android:id="@+id/Ecology"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/education_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox28"
+                        android:id="@+id/Education"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/evolution_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox27"
+                        android:id="@+id/Evolution"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/flags_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox26"
+                        android:id="@+id/Flags"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/food_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox25"
+                        android:id="@+id/Food"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/games_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox24"
+                        android:id="@+id/Games"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/geography_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox23"
+                        android:id="@+id/Geography"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/guns_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox22"
+                        android:id="@+id/Guns"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/history_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox21"
+                        android:id="@+id/History"
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:text="CheckBox"
+                        android:text="@string/insects_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox20"
+                        android:id="@+id/Insects"
                         android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/law_enforcement_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/LawEnforcement"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/medicine_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Medicine"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/magic_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Magic"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/music_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Music"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/parties_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Parties"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/religion_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Religion"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/sight_seeing_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/SightSeeing"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/theater_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Theater"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/travel_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Travel"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/volunteering_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Volunteering"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/wine_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Wine"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/writing_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Writing"
+                        android:textSize="20sp" />
+
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
