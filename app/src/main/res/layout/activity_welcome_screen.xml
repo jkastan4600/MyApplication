@@ -22,6 +22,7 @@
 
     <Button
         android:text="@string/login_button"
+        android:onClick="loginButton"
         android:layout_marginTop="31dp"
         android:id="@+id/login_button_id"
         android:layout_below="@+id/textView"
@@ -31,6 +32,7 @@
 
     <Button
         android:text="@string/create_new_account_button"
+        android:onClick="createNewAccountButton"
         android:layout_height="70dp"
         android:layout_marginTop="37dp"
         android:id="@+id/Create_new_account_button_id"
