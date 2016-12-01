@@ -14,13 +14,17 @@
         android:text="@string/my_likes_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/mylikesview" />
+        android:id="@+id/mylikesview"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:textStyle="normal|bold" />
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_below="@+id/mylikesview"
-        android:id="@+id/my_likes_scrollview">
+        android:id="@+id/my_likes_scrollview"
+        android:layout_marginTop="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"

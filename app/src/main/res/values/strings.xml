@@ -88,7 +88,7 @@
     <string name="set_likes_text">Set Likes</string>
     <string name="set_my_likes_text">Set My Likes</string>
     <string name="main_menu_text"><u>Main Menu</u></string>
-    <string name="my_likes_mainmenu_text">My Likes</string>
+    <string name="my_likes_mainmenu_text"><u>My Likes</u></string>
     <string name="create_new_event">Create New Event</string>
     <string name="logout_text">Logout</string>
     <string name="my_events_text">My Events</string>
