@@ -17,4 +17,9 @@ public class MainMenu extends AppCompatActivity {
         Intent findEventsButton = new Intent(this,FindEvents.class); // switches to Find Events
         startActivity(findEventsButton);
     }
+
+    public void createNewEventButton(View view){
+        Intent createNewEventIntent = new Intent(this,CreateEventScreen.class); // switches to
+        startActivity(createNewEventIntent);                                    // create new event
+    }
 }

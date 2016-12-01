@@ -32,6 +32,7 @@
 
         <Button
             android:text="@string/create_new_event"
+            android:onClick="createNewEventButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/mm_create_new_event"
