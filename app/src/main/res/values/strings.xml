@@ -84,4 +84,7 @@
     <string name="volunteering_text">Volunteering</string>
     <string name="weather_text">Weather</string>
     <string name="wine_text">Wine</string>
+    <string name="my_likes_text"><u>My Likes</u></string>
+    <string name="set_likes_text">Set Likes</string>
+    <string name="set_my_likes_text">Set My Likes</string>
 </resources>

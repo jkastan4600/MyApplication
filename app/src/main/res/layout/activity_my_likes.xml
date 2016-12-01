@@ -10,9 +10,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jkast.myapplication.MyLikes">
 
-    <ScrollView
+    <TextView
+        android:text="@string/my_likes_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:id="@+id/mylikesview"
+        android:textSize="35sp"
+        android:textStyle="normal|bold" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mylikesview"
+        android:id="@+id/my_likes_scrollview">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -480,6 +490,16 @@
 
                 </LinearLayout>
             </LinearLayout>
+
+            <Button
+                android:text="@string/set_my_likes_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/set_likes_btn"
+                android:textSize="30sp"
+                android:layout_below="@+id/my_likes_scrollview"
+                android:elevation="10dp" />
         </LinearLayout>
     </ScrollView>
+
 </RelativeLayout>
