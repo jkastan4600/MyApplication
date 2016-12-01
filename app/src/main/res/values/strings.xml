@@ -96,4 +96,5 @@
     <string name="find_events_text"><u>Find Events</u></string>
     <string name="event1_button">Birdwatching | 12/07/2016 | 8:00 AM EST</string>
     <string name="event2_button">IT Seminar | 12/10/2016 | 1:30 PM EST</string>
+    <string name="create_new_event_text"><u>Create New Event</u></string>
 </resources>
