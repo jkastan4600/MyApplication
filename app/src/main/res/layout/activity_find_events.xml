@@ -33,17 +33,19 @@
             android:text="@string/event1_button"
             android:onClick="birdwatching"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:id="@+id/birdwatching_event_button_id"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="16sp" />
 
         <Button
             android:text="@string/event2_button"
             android:onClick="itSeminar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:id="@+id/it_seminar_event_button_id"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="16sp" />
 
     </LinearLayout>
 </RelativeLayout>

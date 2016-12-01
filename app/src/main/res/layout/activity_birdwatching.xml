@@ -10,15 +10,68 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jkast.myapplication.Birdwatching">
 
-    <TextView
-        android:text="@string/bird_watching_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="135dp"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="79dp"
-        android:id="@+id/textView2" />
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="@string/event_details_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/event_details_id"
+            android:layout_weight="0.13"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:textSize="48sp"
+            android:drawableBottom="@android:drawable/divider_horizontal_textfield" />
+
+        <TextView
+            android:text="@string/birdwatching_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/birdwatching_title_id"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:textStyle="normal|italic"
+            android:padding="10dp"
+            android:drawableBottom="@android:drawable/divider_horizontal_textfield"
+            android:layout_weight="0.20" />
+
+        <TextView
+            android:text="@string/birdwatching_desc_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/birdwatching_desc_id"
+            android:layout_weight="0.16"
+            android:textAlignment="textStart"
+            android:textSize="22sp"
+            android:lineSpacingExtra="2sp"
+            android:drawableBottom="@android:drawable/divider_horizontal_textfield" />
+
+        <TextView
+            android:text="@string/birdwatching_desc2_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/birdwatching_desc2_id"
+            android:layout_weight="0.27"
+            android:textSize="18sp"
+            android:lineSpacingExtra="8sp"
+            android:paddingTop="15dp" />
+
+        <Button
+            android:text="@string/attend1_button"
+            android:onClick="attendButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/attend_button_id"
+            android:layout_weight="0.09"
+            android:background="@android:color/holo_green_light"
+            android:textStyle="normal|bold"
+            android:textSize="26sp" />
+    </LinearLayout>
 </RelativeLayout>
