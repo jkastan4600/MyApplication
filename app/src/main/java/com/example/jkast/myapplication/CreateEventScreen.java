@@ -7,11 +7,19 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-public abstract class CreateEventScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class CreateEventScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
 
     private Spinner spinner;
-    private static final String[] paths = {"item 1", "item 2", "item 3"};
+    private static final String[] paths = {"Animals", "Agriculture", "Archaeology", "Arts & Crafts",
+            "Architecture", "Aviation", "Biology", "Bird Watching", "Bombs", "Books", "Collecting",
+            "Competition", "Crime", "Culture", "Current Events", "Dance", "Dating", "Doctors",
+            "Drama", "Ecology", "Economics", "Education", "Engineering", "Evolution", "Fitness",
+            "Flags", "Flowers", "Food", "Fund Raising", "Games", "Gardens/Gardening", "Geography",
+            "Government", "Guns", "Health", "History", "Hobbies", "Insects", "Investing",
+            "Law Enforcement", "Lunch Outings", "Medicine", "Military", "Magic", "Movies", "Music",
+            "Nature", "Parties", "Politics", "Religion", "Sports", "Sight Seeing", "Technology",
+            "Theater", "The Colonnades", "Travel", "UVA", "Volunteering", "Weather", "Wine", "Writing"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,5 +50,10 @@ public abstract class CreateEventScreen extends AppCompatActivity implements Ada
                 break;
 
         }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }

@@ -126,7 +126,8 @@
                 android:cursorVisible="true"
                 android:keepScreenOn="true"
                 android:layout_marginLeft="15dp"
-                android:background="@android:drawable/editbox_background_normal" />
+                android:background="@android:drawable/editbox_background_normal"
+                android:textAlignment="center" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -136,7 +137,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:background="@android:drawable/editbox_background_normal"
-                android:layout_marginTop="9dp" />
+                android:layout_marginTop="9dp"
+                android:textAlignment="center" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -148,7 +150,9 @@
                 android:outlineProvider="background"
                 android:layout_marginLeft="15dp"
                 android:background="@android:drawable/editbox_background_normal"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="8dp"
+                android:textAlignment="center"
+                android:text="example@email.com" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -159,7 +163,8 @@
                 android:password="true"
                 android:layout_marginLeft="15dp"
                 android:background="@android:drawable/editbox_background_normal"
-                android:layout_marginTop="9dp" />
+                android:layout_marginTop="9dp"
+                android:textAlignment="center" />
 
         </LinearLayout>
 

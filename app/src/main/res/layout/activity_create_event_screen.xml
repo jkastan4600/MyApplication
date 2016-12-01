@@ -11,24 +11,29 @@
     tools:context="com.example.jkast.myapplication.CreateEventScreen">
 
     <TextView
-        android:text="@string/create_new_event"
+        android:text="@string/create_new_event_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/create_new_event_id"
-        android:textSize="30sp"
-        android:textColor="@android:color/black" />
+        android:textSize="35sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:textStyle="normal|bold" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/new_event_horzlayout"
         android:layout_below="@+id/create_new_event_id"
-        android:id="@+id/new_event_horzlayout">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="189dp"
-            android:layout_height="533dp"
+            android:layout_height="wrap_content"
             android:id="@+id/lefthand_vertlayout">
 
             <TextView
@@ -80,8 +85,9 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="535dp"
-            android:id="@+id/righthand_vertlayout">
+            android:layout_height="wrap_content"
+            android:id="@+id/righthand_vertlayout"
+            android:weightSum="1">
 
             <EditText
                 android:layout_width="match_parent"
@@ -89,16 +95,67 @@
                 android:inputType="textPersonName"
                 android:text="@string/name_text"
                 android:id="@+id/enter_event_name"
-                android:layout_marginTop="20dp"
-                android:textSize="25sp" />
+                android:layout_marginTop="35dp"
+                android:textSize="25sp"
+                android:background="@android:drawable/button_onoff_indicator_off"
+                android:textAlignment="center" />
 
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/category_spinner"
-                android:layout_marginTop="13dp"
+                android:layout_marginTop="20dp"
                 android:background="@android:drawable/btn_dropdown"
                 android:spinnerMode="dropdown" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/create_event_location"
+                android:layout_marginTop="15dp"
+                android:background="@android:drawable/button_onoff_indicator_off"
+                android:textSize="25sp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name_text"
+                android:id="@+id/create_event_date"
+                android:layout_marginTop="30dp"
+                android:textSize="25sp"
+                android:background="@android:drawable/button_onoff_indicator_off"
+                android:inputType="date"
+                android:hint="@string/date_format_hint_text"
+                android:textAlignment="center" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name_text"
+                android:id="@+id/create_event_time"
+                android:layout_marginTop="30dp"
+                android:textSize="25sp"
+                android:background="@android:drawable/button_onoff_indicator_off"
+                android:inputType="time"
+                android:textAlignment="center"
+                android:hint="@string/time_hint_text" />
+
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:text="@string/create_event_btn_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_even_new_btn"
+        android:layout_below="@+id/new_event_horzlayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="57dp"
+        android:background="@android:color/holo_green_light"
+        android:textSize="25sp"
+        android:textColor="@android:color/black" />
 </RelativeLayout>
