@@ -19,7 +19,7 @@ public class FindEvents extends AppCompatActivity {
     }
 
     public void itSeminar(View view){
-        Intent itSeminarButton = new Intent(this,IT_Seminar.class); // switches to it seminar
-        startActivity(itSeminarButton);
+        //Intent itSeminarButton = new Intent(this,IT_Seminar.class); // switches to it seminar
+        //startActivity(itSeminarButton);
     }
 }

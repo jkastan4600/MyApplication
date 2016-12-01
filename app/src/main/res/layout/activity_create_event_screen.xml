@@ -11,10 +11,10 @@
     tools:context="com.example.jkast.myapplication.CreateEventScreen">
 
     <TextView
-        android:text="@string/create_new_event_text"
+        android:text="@string/create_new_event"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
+        android:id="@+id/create_new_event_id"
         android:textSize="30sp"
         android:textColor="@android:color/black" />
 
@@ -22,7 +22,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2">
+        android:layout_below="@+id/create_new_event_id">
 
         <LinearLayout
             android:orientation="vertical"
@@ -86,7 +86,7 @@
                 android:inputType="textPersonName"
                 android:text="@string/name_text"
                 android:id="@+id/enter_event_name"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:textSize="25sp" />
 
             <Spinner
