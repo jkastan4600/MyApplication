@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/attend_button_id"
             android:layout_weight="0.09"
-            android:background="@android:color/holo_green_light"
+            android:background="#1bcc00"
             android:textStyle="normal|bold"
             android:textSize="26sp" />
     </LinearLayout>

@@ -503,7 +503,7 @@
                 android:textSize="30sp"
                 android:layout_below="@+id/my_likes_scrollview"
                 android:elevation="10dp"
-                android:background="@android:color/holo_green_light" />
+                android:background="#1bcc00" />
         </LinearLayout>
     </ScrollView>
 

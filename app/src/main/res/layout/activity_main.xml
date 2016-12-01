@@ -45,7 +45,7 @@
         tools:textColorHint="@android:color/holo_red_dark"
         android:onClick="createAccountButton"
 
-        android:background="@android:color/holo_green_light"
+        android:background="#1bcc00"
         android:textSize="25sp"
         android:layout_below="@+id/info_fields_area"
         android:layout_toRightOf="@+id/acct_create_banner"
