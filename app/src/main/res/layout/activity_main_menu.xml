@@ -30,19 +30,19 @@
             android:background="@android:color/holo_blue_dark" />
 
         <Button
-            android:text="@string/my_events_text"
+            android:text="@string/create_new_event"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/mm_my_events"
+            android:id="@+id/mm_create_new_event"
             android:textSize="25sp"
             android:layout_marginTop="25dp"
             android:background="@android:color/holo_blue_dark" />
 
         <Button
-            android:text="@string/create_new_event"
+            android:text="@string/my_events_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/mm_create_new_event"
+            android:id="@+id/mm_my_events"
             android:textSize="25sp"
             android:layout_marginTop="25dp"
             android:background="@android:color/holo_blue_dark" />
@@ -78,8 +78,9 @@
         android:textSize="50sp"
         android:layout_weight="0.36"
         android:textStyle="normal|bold"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="@android:color/black"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
 
 </RelativeLayout>

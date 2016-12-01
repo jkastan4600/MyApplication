@@ -23,10 +23,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/find_events_text_id"
             android:textSize="48sp"
-            android:textStyle="normal|italic"
+            android:textStyle="normal|bold"
             android:textAlignment="center"
             android:paddingBottom="20dp"
-            android:drawableBottom="@android:drawable/divider_horizontal_textfield" />
+            android:drawableBottom="@android:drawable/divider_horizontal_textfield"
+            android:textColor="@android:color/black" />
 
         <Button
             android:text="@string/event1_button"

@@ -15,34 +15,39 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/acct_create_banner"
+        android:baselineAligned="false"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/acct_create_banner"
-        android:baselineAligned="false">
+        android:layout_alignParentStart="true">
 
-        <TextView
-            android:text="@string/account_creation_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/creation_banner"
-            android:textSize="36sp"
-            android:textAlignment="center"
-            android:textStyle="normal|bold"
-            android:layout_below="@+id/acct_create_banner"
-            android:layout_centerHorizontal="true" />
     </LinearLayout>
+
+    <Button
+        android:text="@string/create_account_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button6"
+        tools:textColorHint="@android:color/holo_red_dark"
+        android:onClick="createAccountButton"
+
+        android:background="@android:color/holo_green_light"
+        android:textSize="25sp"
+        android:layout_marginBottom="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:id="@+id/info_fields_area"
         android:weightSum="1"
-        android:layout_below="@+id/acct_create_banner"
+        android:layout_height="170dp"
+        android:layout_above="@+id/button6"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="83dp"
-        android:layout_height="170dp">
+        android:layout_marginBottom="30dp">
 
         <LinearLayout
             android:orientation="vertical"
@@ -63,7 +68,8 @@
                 android:id="@+id/Fname_display"
                 android:textSize="20sp"
                 android:layout_weight="0.38"
-                android:layout_marginTop="5dp" />
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black" />
 
             <TextView
                 android:text="@string/last_name_text"
@@ -74,7 +80,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="18dp"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="@android:color/black" />
 
             <TextView
                 android:text="@string/username_text"
@@ -85,7 +92,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="19dp"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="@android:color/black" />
 
             <TextView
                 android:text="@string/password_text"
@@ -95,7 +103,8 @@
 
                 android:layout_marginTop="18dp"
                 android:textSize="20sp"
-                android:layout_weight="2.43" />
+                android:layout_weight="2.43"
+                android:textColor="@android:color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -156,17 +165,18 @@
 
     </LinearLayout>
 
-    <Button
-        android:text="@string/create_account_text"
-        android:layout_width="wrap_content"
+    <TextView
+        android:text="@string/account_creation_text"
+        android:layout_width="378dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:id="@+id/button6"
-        android:layout_below="@+id/info_fields_area"
-        android:layout_centerHorizontal="true"
-        tools:textColorHint="@android:color/holo_red_dark"
-        android:onClick="createAccountButton"
-
-        />
+        android:id="@+id/creation_banner"
+        android:textSize="36sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="194dp"
+        android:layout_below="@+id/acct_create_banner"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
