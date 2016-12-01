@@ -11,40 +11,52 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jkast.myapplication.WelcomeScreen">
 
-    <TextView
-        android:text="@string/welcome_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:id="@+id/textView"
-        android:textSize="48sp"
-        android:textColor="@android:color/black" />
-
     <Button
         android:text="@string/login_button"
         android:onClick="loginButton"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="44dp"
         android:id="@+id/login_button_id"
         android:layout_width="220dp"
         android:layout_height="90dp"
         android:textSize="25sp"
+        android:background="@android:color/holo_green_light"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:background="@android:color/holo_green_light" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="@string/create_new_account_button"
         android:onClick="createNewAccountButton"
         android:layout_height="70dp"
-        android:layout_marginTop="86dp"
+        android:layout_marginTop="33dp"
         android:id="@+id/Create_new_account_button_id"
         android:layout_width="match_parent"
         android:textSize="25sp"
+        android:background="@android:color/holo_red_light"
         android:layout_below="@+id/login_button_id"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@android:color/holo_red_light" />
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:id="@+id/textView"
+        android:textColor="@android:color/black"
+        android:textStyle="normal|bold"
+        android:fontFamily="sans-serif"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="60sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/wide_607"
+        android:id="@+id/imageView2"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/Create_new_account_button_id"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

@@ -1,11 +1,15 @@
 package com.example.jkast.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import static android.widget.Toast.makeText;
 
 public class CreateEventScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -55,5 +59,11 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public void createEventButton(View view){
+        makeText(CreateEventScreen.this,"You have successfully created your event.", Toast.LENGTH_LONG).show();
+        Intent createEventIntent = new Intent(this,MainMenu.class); // switches to it main menu
+        startActivity(createEventIntent);
     }
 }

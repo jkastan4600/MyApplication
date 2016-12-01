@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/create_new_event_id"
-        android:textSize="35sp"
+        android:textSize="40sp"
         android:textColor="@android:color/black"
         android:textAlignment="center"
         android:textStyle="normal|bold" />
@@ -95,9 +95,9 @@
                 android:inputType="textPersonName"
                 android:text="@string/name_text"
                 android:id="@+id/enter_event_name"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="25dp"
                 android:textSize="25sp"
-                android:background="@android:drawable/button_onoff_indicator_off"
+                android:background="@android:drawable/editbox_background_normal"
                 android:textAlignment="center" />
 
             <Spinner
@@ -113,8 +113,8 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/create_event_location"
-                android:layout_marginTop="15dp"
-                android:background="@android:drawable/button_onoff_indicator_off"
+                android:layout_marginTop="14dp"
+                android:background="@android:drawable/editbox_background_normal"
                 android:textSize="25sp"
                 android:layout_height="wrap_content"
                 android:textAlignment="center" />
@@ -124,9 +124,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/name_text"
                 android:id="@+id/create_event_date"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:textSize="25sp"
-                android:background="@android:drawable/button_onoff_indicator_off"
+                android:background="@android:drawable/editbox_background_normal"
                 android:inputType="date"
                 android:hint="@string/date_format_hint_text"
                 android:textAlignment="center" />
@@ -136,9 +136,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/name_text"
                 android:id="@+id/create_event_time"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:textSize="25sp"
-                android:background="@android:drawable/button_onoff_indicator_off"
+                android:background="@android:drawable/editbox_background_normal"
                 android:inputType="time"
                 android:textAlignment="center"
                 android:hint="@string/time_hint_text" />
@@ -148,6 +148,7 @@
 
     <Button
         android:text="@string/create_event_btn_text"
+        android:onClick="createEventButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/create_even_new_btn"

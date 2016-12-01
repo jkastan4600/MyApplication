@@ -72,7 +72,7 @@
                 android:textSize="25sp"
                 android:text="@string/action_sign_in"
                 android:textStyle="bold"
-                android:background="@android:color/holo_green_light"
+                android:background="#1bcc00"
                 android:textColor="@android:color/black" />
 
         </LinearLayout>

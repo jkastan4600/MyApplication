@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -23,20 +24,34 @@
 
     </LinearLayout>
 
+    <TextView
+        android:text="@string/account_creation_text"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/creation_banner"
+        android:textSize="36sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:layout_above="@+id/info_fields_area"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="17dp" />
+
     <Button
         android:text="@string/create_account_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/button6"
         tools:textColorHint="@android:color/holo_red_dark"
         android:onClick="createAccountButton"
 
         android:background="@android:color/holo_green_light"
         android:textSize="25sp"
-        android:layout_marginBottom="37dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/info_fields_area"
+        android:layout_toRightOf="@+id/acct_create_banner"
+        android:layout_toEndOf="@+id/acct_create_banner"
+        android:layout_marginTop="46dp"
+        android:layout_height="60dp" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -44,10 +59,9 @@
         android:id="@+id/info_fields_area"
         android:weightSum="1"
         android:layout_height="170dp"
-        android:layout_above="@+id/button6"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="30dp">
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:orientation="vertical"
@@ -151,8 +165,7 @@
                 android:layout_marginLeft="15dp"
                 android:background="@android:drawable/editbox_background_normal"
                 android:layout_marginTop="8dp"
-                android:textAlignment="center"
-                android:text="example@email.com" />
+                android:textAlignment="center" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -170,18 +183,13 @@
 
     </LinearLayout>
 
-    <TextView
-        android:text="@string/account_creation_text"
-        android:layout_width="378dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/creation_banner"
-        android:textSize="36sp"
-        android:textStyle="normal|bold"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="194dp"
-        android:layout_below="@+id/acct_create_banner"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <ImageView
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/pofile_picture_image"
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_marginBottom="31dp"
+        android:layout_alignBottom="@+id/creation_banner"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
