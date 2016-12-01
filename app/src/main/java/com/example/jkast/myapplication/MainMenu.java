@@ -1,7 +1,9 @@
 package com.example.jkast.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainMenu extends AppCompatActivity {
 
@@ -9,5 +11,10 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+    }
+
+    public void findEventsButton(View view){
+        Intent findEventsButton = new Intent(this,FindEvents.class); // switches to Find Events
+        startActivity(findEventsButton);
     }
 }
