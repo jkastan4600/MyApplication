@@ -10,16 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jkast.myapplication.CreateEventScreen">
 
-    <TextView
-        android:text="@string/create_new_event_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/create_new_event_id"
-        android:textSize="40sp"
-        android:textColor="@android:color/black"
-        android:textAlignment="center"
-        android:textStyle="normal|bold" />
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -159,4 +149,18 @@
         android:background="@android:color/holo_green_light"
         android:textSize="25sp"
         android:textColor="@android:color/black" />
+
+    <TextView
+        android:text="@string/create_new_event_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_new_event_id"
+        android:textSize="40sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp" />
 </RelativeLayout>
