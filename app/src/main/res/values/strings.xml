@@ -98,10 +98,17 @@
     <string name="event1_button">Bird Watching | 12/07/2016 | 8:00 AM EST</string>
     <string name="event2_button">IT Seminar | 12/10/2016 | 1:30 PM EST</string>
 
+    <string name="create_new_event_text"><u>Create New Event</u></string>
+    <string name="event_name_text">Event Name</string>
     <string name="event_details_text"><u>Event Details</u></string>
     <string name="birdwatching_text">Bird Watching</string>
     <string name="attend1_button">Attend</string>
     <string name="birdwatching_desc_text">Bird watching is a great way to get outside and envelop yourself in what natures has best to offer. Please join us for a great morning, it will be beautiful!</string>
     <string name="birdwatching_desc2_text">WHERE: Building 2 Parking Lot \nWHEN: 8:00 AM \nCREATED BY: Mason, Judy</string>
+    <string name="category_text">Category</string>
+    <string name="location_text">Location</string>
+    <string name="date_text">Date</string>
+    <string name="time_text">Time</string>
+    <string name="name_text"></string>
 
 </resources>
