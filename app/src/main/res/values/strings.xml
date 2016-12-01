@@ -87,4 +87,7 @@
     <string name="my_likes_text"><u>My Likes</u></string>
     <string name="set_likes_text">Set Likes</string>
     <string name="set_my_likes_text">Set My Likes</string>
+    <string name="find_events_text">Find Events</string>
+    <string name="event1_button">Birdwatching | 12/07/16 8:00 AM EST</string>
+    <string name="event2_button">IT Seminar | 12/15/16 1:30 PM EST</string>
 </resources>
