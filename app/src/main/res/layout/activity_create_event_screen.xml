@@ -22,12 +22,14 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/create_new_event_id">
+        android:layout_below="@+id/create_new_event_id"
+        android:id="@+id/new_event_horzlayout">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="189dp"
-            android:layout_height="533dp">
+            android:layout_height="533dp"
+            android:id="@+id/lefthand_vertlayout">
 
             <TextView
                 android:text="@string/event_name_text"
@@ -78,7 +80,8 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="535dp">
+            android:layout_height="535dp"
+            android:id="@+id/righthand_vertlayout">
 
             <EditText
                 android:layout_width="match_parent"
