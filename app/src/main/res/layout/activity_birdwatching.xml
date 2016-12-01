@@ -48,7 +48,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/birdwatching_desc_id"
             android:layout_weight="0.16"
-            android:textAlignment="textStart"
             android:textSize="22sp"
             android:lineSpacingExtra="2sp"
             android:drawableBottom="@android:drawable/divider_horizontal_textfield" />
