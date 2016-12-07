@@ -15,7 +15,7 @@ import static android.widget.Toast.makeText;
 public class MainActivity extends AppCompatActivity {
     DatabaseHelper dbh;
     EditText editFirstName, editLastName, editUsername, editPassword;
-    Button createAccount;
+    Button createAccountButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,23 +23,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         dbh = new DatabaseHelper(this);
 
+        // cast components
         editFirstName = (EditText)findViewById(R.id.fname_enter_area);
         editLastName = (EditText)findViewById(R.id.lname_enter_area);
         editUsername = (EditText)findViewById(R.id.email_enter_area);
         editPassword = (EditText)findViewById(R.id.password_enter_area);
-        createAccount = (Button)findViewById(R.id.button6);
-        addData();
+        createAccountButton = (Button)findViewById(R.id.button6);
+
+        // call action performed-type method
+        actionPerformed();
     }
 
 
 
 
-    public void addData(){
+    public void actionPerformed(){
         final Intent accCreatedIntent = new Intent(this,MyLikes.class);
-        createAccount.setOnClickListener(new View.OnClickListener(){
+        createAccountButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                boolean isInserted = dbh.insertData(
+                boolean isInserted = dbh.insertUser(
                         editFirstName.getText().toString(),
                         editLastName.getText().toString(),
                         editUsername.getText().toString(),
