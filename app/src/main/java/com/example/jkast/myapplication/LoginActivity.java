@@ -38,6 +38,9 @@ import static android.Manifest.permission.READ_CONTACTS;
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
+    public String username = "";
+    public EditText usernameText;
+
     /**
      * Id to identity READ_CONTACTS permission request.
      */
@@ -332,6 +335,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
+                usernameText = (EditText)findViewById(R.id.username);
                 switchToMainMenu(); // if info is valid then switch to the main menu
                 finish();
             } else {
@@ -352,6 +356,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     public void switchToMainMenu(){
         Intent accLoggedInIntent = new Intent(this, MainMenu.class); // switches to main menu
         startActivity(accLoggedInIntent);
+    }
+
+    /**
+     * Returns the username logged in
+     * @return the username
+     */
+    public String getUsername(){
+        return username;
     }
 }
 

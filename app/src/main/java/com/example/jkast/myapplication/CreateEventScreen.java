@@ -15,6 +15,7 @@ import static android.widget.Toast.makeText;
 
 public class CreateEventScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    LoginActivity loginActivity;
     DatabaseHelper dbh;
     EditText eventName, eventDate, eventTime, eventCreatedBy, eventLocation, eventDetails,
             eventCapacity, eventCategory;
@@ -45,6 +46,7 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
         spinner.setOnItemSelectedListener(this);
 
         dbh = new DatabaseHelper(this);
+        loginActivity = new LoginActivity();
 
         // cast components
         eventName = (EditText)findViewById(R.id.enter_event_name);
@@ -65,9 +67,10 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
 
         switch (position) {
             case 0:
+                System.out.println("YOU SELECTED ANIMALS");
                 // Whatever you want to happen when the first item gets selected
                 break;
-            case 1:
+            case 1: System.out.println("YOU SELECTED AGRICULTURE");
                 // Whatever you want to happen when the second item gets selected
                 break;
             case 2:
@@ -90,14 +93,14 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
             @Override
             public void onClick(View view) {
                 boolean isInserted = dbh.insertEvent(
-                        eventName.getText().toString(), // col_1 name
-                        eventDate.getText().toString(), // col_2 date
-                        eventTime.getText().toString(), // col_3 time
-                        "createdExample",//eventTime.getText().toString(), // col_4 createdBy
-                        eventLocation.getText().toString(), // col_5 location
-                        "detailsExample",//eventTime.getText().toString(), // col_6 details
-                        30,//eventTime.getText().toString(), // col_7 capacity
-                        "categoryExample"//eventCategory.getText().toString(), // col_8 category
+                        eventName.getText().toString(), // col_2 name
+                        eventDate.getText().toString(), // col_3 date
+                        eventTime.getText().toString(), // col_4 time
+                        loginActivity.getUsername(), // col_5 createdBy
+                        eventLocation.getText().toString(), // col_6 location
+                        "detailsExample",//eventTime.getText().toString(), // col_7 details
+                        30,//eventTime.getText().toString(), // col_8 capacity
+                        spinner.getSelectedItem().toString() // col_9 category
                 );
                 if(isInserted){
                     makeText(CreateEventScreen.this,"Your event has been created.", Toast.LENGTH_LONG).show();

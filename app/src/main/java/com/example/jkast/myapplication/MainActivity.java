@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 boolean isInserted = dbh.insertUser(
+                        editUsername.getText().toString(),
                         editFirstName.getText().toString(),
                         editLastName.getText().toString(),
-                        editUsername.getText().toString(),
                         editPassword.getText().toString() );
                 if(isInserted){
                     makeText(MainActivity.this,"Account successfully created.", Toast.LENGTH_LONG).show();
