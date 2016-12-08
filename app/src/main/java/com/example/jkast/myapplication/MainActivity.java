@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import static android.view.View.*;
 import static android.widget.Toast.makeText;
 
@@ -33,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
         // call action performed-type method
         actionPerformed();
     }
-
-
 
 
     public void actionPerformed(){

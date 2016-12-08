@@ -39,7 +39,7 @@ import static android.Manifest.permission.READ_CONTACTS;
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
-    public String username = "T";
+    public String username = "";
     public EditText usernameText;
     DatabaseHelper dbh;
 
@@ -356,17 +356,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     public void switchToMainMenu(){
-        Intent accLoggedInIntent = new Intent(this, MainMenu.class); // switches to main menu
-        startActivity(accLoggedInIntent);
-    }
+        Intent accLoggedInIntent = new Intent(LoginActivity.this, MainMenu.class); // switches to main menu
+        AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.username);
+        String getrec = textView.getText().toString();
+        Bundle bundle = new Bundle();
+        bundle.putString("email", getrec);
+        accLoggedInIntent.putExtras(bundle);
 
-    /**
-     * Returns the username logged in
-     * @return the username
-     */
-    public String getUsername(){
-        System.out.println("INSIDE getUsername() THE USERNAME IS " + username);
-        return username;
+
+        startActivity(accLoggedInIntent);
     }
 
 

@@ -19,7 +19,18 @@ public class MainMenu extends AppCompatActivity {
     }
 
     public void createNewEventButton(View view){
-        Intent createNewEventIntent = new Intent(this,CreateEventScreen.class); // switches to
-        startActivity(createNewEventIntent);                                    // create new event
+        Intent createNewEventIntent = new Intent(this,CreateEventScreen.class);
+        //Get the bundle
+        Bundle bundle = getIntent().getExtras();
+        //Extract the data…
+        String stuff = bundle.getString("email");
+        //Create the bundle
+        Bundle bundle2 = new Bundle();
+        //Add your data to bundle
+        bundle.putString("email2", stuff);
+        //Add the bundle to the intent
+        createNewEventIntent.putExtras(bundle);
+        // switches to create new event
+        startActivity(createNewEventIntent);
     }
 }
