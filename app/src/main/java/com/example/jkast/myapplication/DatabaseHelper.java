@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 /**
  * Created by Vance Field III on 12/5/2016.
  */
@@ -114,24 +117,6 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     /**
-     * Retrieves the password for the user
-     * @param username the users username
-     * @return the users password
-     */
-    public String getPasswordForUser(String username){
-        String select = "select * from Users where Username = '" + username + "'";
-        String password = "jolly";
-        Cursor c = db.rawQuery(select, null);
-        if(c.moveToFirst()) {
-            do{
-                password = c.getString(c.getColumnIndex("Password"));
-            } while(c.moveToNext());
-        }
-        c.close();
-        return password;
-    }
-
-    /**
      * Creates a row that represents a user and his/her like
      * @param username the users username
      * @param category the users like
@@ -154,6 +139,32 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         }
         return successfulInsertion;
     }
+
+    /**
+     * Retrieves the password for the user
+     * @param username the users username
+     * @return the users password
+     */
+    public String getPasswordForUser(String username){
+        String select = "select * from Users where Username = '" + username + "'";
+        String password = "jolly";
+        Cursor c = db.rawQuery(select, null);
+        if(c.moveToFirst()) {
+            do{
+                password = c.getString(c.getColumnIndex("Password"));
+            } while(c.moveToNext());
+        }
+        c.close();
+        return password;
+    }
+
+
+    public String[] getAllUserLikes(String username){
+        String[] likes = {};
+        String select = "select * from UserLikes where Username = '" + username + "'";
+        return likes;
+    }
+
 
 
 
