@@ -10,15 +10,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
+import android.widget.TextView;
 import static android.widget.Toast.makeText;
 
 public class CreateEventScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     LoginActivity loginActivity;
     DatabaseHelper dbh;
-    EditText eventName, eventDate, eventTime, eventCreatedBy, eventLocation, eventDetails,
-            eventCapacity, eventCategory;
+    EditText eventName;
+    EditText eventDate;
+    EditText eventTime;
+    String eventCreatedBy;
+    EditText eventLocation;
+    EditText eventDetails;
+    EditText eventCapacity;
+    EditText eventCategory;
     Button createEventButton;
 
     private Spinner spinner;
@@ -52,10 +58,11 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
         eventName = (EditText)findViewById(R.id.enter_event_name);
         eventDate = (EditText)findViewById(R.id.create_event_date);
         eventTime = (EditText)findViewById(R.id.create_event_time);
-        //eventCreatedBy = (EditText)findViewById(R.id.enter_event_name);           // need to fix
+        Bundle bundle = getIntent().getExtras();
+        eventCreatedBy = bundle.getString("email2");// need to fix
         eventLocation = (EditText)findViewById(R.id.create_event_location);
-        //eventDetails = (EditText)findViewById(R.id.create_event_details);         // need to fix
-        //eventCapacity = (EditText)findViewbyId(R.id.create_event_capacity);       // need to fix
+        eventDetails = (EditText)findViewById(R.id.create_event_description);         // need to fix
+        eventCapacity = (EditText)findViewById(R.id.create_event_capacity);       // need to fix
         //eventCategory = (EditText)findViewById(R.id.category_spinner);            // need to fix
         createEventButton = (Button)findViewById(R.id.create_even_new_btn);
 
@@ -63,21 +70,9 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
         actionPerformed();
     }
 
-    public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        switch (position) {
-            case 0:
-                System.out.println("YOU SELECTED ANIMALS");
-                // Whatever you want to happen when the first item gets selected
-                break;
-            case 1: System.out.println("YOU SELECTED AGRICULTURE");
-                // Whatever you want to happen when the second item gets selected
-                break;
-            case 2:
-                // Whatever you want to happen when the thrid item gets selected
-                break;
-
-        }
     }
 
     @Override
@@ -96,10 +91,10 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
                         eventName.getText().toString(), // col_2 name
                         eventDate.getText().toString(), // col_3 date
                         eventTime.getText().toString(), // col_4 time
-                        loginActivity.getUsername(), // col_5 createdBy
+                        eventCreatedBy, // col_5 createdBy
                         eventLocation.getText().toString(), // col_6 location
-                        "detailsExample",//eventTime.getText().toString(), // col_7 details
-                        30,//eventTime.getText().toString(), // col_8 capacity
+                        eventDetails.getText().toString(), // col_7 details
+                        Integer.parseInt(eventCapacity.getText().toString()), // col_8 capacity
                         spinner.getSelectedItem().toString() // col_9 category
                 );
                 if(isInserted){

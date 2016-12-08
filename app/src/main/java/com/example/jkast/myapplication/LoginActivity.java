@@ -70,6 +70,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         setContentView(R.layout.activity_login);
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.username);
+        //Intent intentEmail = new Intent(LoginActivity.this, CreateEventScreen.class);
+        //startActivity(intentEmail);
+
         populateAutoComplete();
 
         mPasswordView = (EditText) findViewById(R.id.password);
@@ -91,7 +94,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 attemptLogin();
             }
         });
-
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
@@ -156,6 +158,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         // Store values at the time of the login attempt.
         String email = mEmailView.getText().toString();
+
+
+        ///////////////////////////////////
         String password = mPasswordView.getText().toString();
 
         boolean cancel = false;
@@ -354,7 +359,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     public void switchToMainMenu(){
-        Intent accLoggedInIntent = new Intent(this, MainMenu.class); // switches to main menu
+        Intent accLoggedInIntent = new Intent(LoginActivity.this, MainMenu.class); // switches to main menu
+        AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.username);
+        String getrec = textView.getText().toString();
+        Bundle bundle = new Bundle();
+        bundle.putString("email", getrec);
+        accLoggedInIntent.putExtras(bundle);
+
+
         startActivity(accLoggedInIntent);
     }
 

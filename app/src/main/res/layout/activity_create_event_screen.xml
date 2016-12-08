@@ -10,157 +10,219 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jkast.myapplication.CreateEventScreen">
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/new_event_horzlayout"
-        android:layout_below="@+id/create_new_event_id"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="40dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="189dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/lefthand_vertlayout">
-
-            <TextView
-                android:text="@string/event_name_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/name_of_event"
-                android:layout_marginTop="30dp"
-                android:textColor="@android:color/black"
-                android:textSize="25sp" />
-
-            <TextView
-                android:text="@string/category_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/event_category"
-                android:layout_marginTop="30dp"
-                android:textColor="@android:color/black"
-                android:textSize="25sp" />
-
-            <TextView
-                android:text="@string/location_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/event_location"
-                android:textColor="@android:color/black"
-                android:textSize="25sp"
-                android:layout_marginTop="30dp" />
-
-            <TextView
-                android:text="@string/date_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/event_date"
-                android:textColor="@android:color/black"
-                android:textSize="25sp"
-                android:layout_marginTop="30dp" />
-
-            <TextView
-                android:text="@string/time_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/event_time"
-                android:layout_marginTop="30dp"
-                android:textColor="@android:color/black"
-                android:textSize="25sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/righthand_vertlayout"
-            android:weightSum="1">
+            android:orientation="vertical" >
 
-            <EditText
+            <TextView
+                android:text="@string/create_new_event_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="@string/name_text"
-                android:id="@+id/enter_event_name"
-                android:layout_marginTop="25dp"
-                android:textSize="25sp"
-                android:background="@android:drawable/editbox_background_normal"
-                android:textAlignment="center" />
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/category_spinner"
-                android:layout_marginTop="20dp"
-                android:background="@android:drawable/btn_dropdown"
-                android:spinnerMode="dropdown" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/create_event_location"
-                android:layout_marginTop="14dp"
-                android:background="@android:drawable/editbox_background_normal"
-                android:textSize="25sp"
-                android:layout_height="wrap_content"
-                android:textAlignment="center" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/name_text"
-                android:id="@+id/create_event_date"
-                android:layout_marginTop="15dp"
-                android:textSize="25sp"
-                android:background="@android:drawable/editbox_background_normal"
-                android:inputType="date"
-                android:hint="@string/date_format_hint_text"
-                android:textAlignment="center" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/name_text"
-                android:id="@+id/create_event_time"
-                android:layout_marginTop="20dp"
-                android:textSize="25sp"
-                android:background="@android:drawable/editbox_background_normal"
-                android:inputType="time"
+                android:id="@+id/create_new_event_id"
+                android:textSize="40sp"
+                android:textColor="@android:color/black"
                 android:textAlignment="center"
-                android:hint="@string/time_hint_text" />
+                android:textStyle="normal|bold"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/new_event_horzlayout"
+                android:layout_below="@+id/create_new_event_id"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="189dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lefthand_vertlayout">
+
+                    <TextView
+                        android:text="@string/event_name_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name_of_event"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:text="@string/category_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/event_category"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:text="@string/location_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/event_location"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp"
+                        android:layout_marginTop="30dp" />
+
+                    <TextView
+                        android:text="@string/date_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/event_date"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp"
+                        android:layout_marginTop="30dp" />
+
+                    <TextView
+                        android:text="@string/time_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/event_time"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:text="@string/event_description_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/event_description"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:text="@string/event_capactiy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/event_cap"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/righthand_vertlayout"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="@string/name_text"
+                        android:id="@+id/enter_event_name"
+                        android:layout_marginTop="25dp"
+                        android:textSize="25sp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:textAlignment="center" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/category_spinner"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/create_event_location"
+                        android:layout_marginTop="14dp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:textSize="25sp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name_text"
+                        android:id="@+id/create_event_date"
+                        android:layout_marginTop="15dp"
+                        android:textSize="25sp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:inputType="date"
+                        android:hint="@string/date_format_hint_text"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name_text"
+                        android:id="@+id/create_event_time"
+                        android:layout_marginTop="20dp"
+                        android:textSize="25sp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:inputType="time"
+                        android:textAlignment="center"
+                        android:hint="@string/time_hint_text" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textMultiLine"
+                                android:ems="10"
+                                android:id="@+id/create_event_description"
+                                android:layout_marginTop="15dp"
+                                android:textSize="24sp"
+                                android:background="@android:drawable/editbox_background_normal" />
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name_text"
+                        android:id="@+id/create_event_capacity"
+                        android:layout_marginTop="20dp"
+                        android:textSize="25sp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:textAlignment="center"
+                        android:hint="@string/hint_for_capactiy"
+                        android:inputType="number" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:text="@string/create_event_btn_text"
+                android:onClick="createEventButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/create_even_new_btn"
+                android:background="#1bcc00"
+                android:textSize="25sp"
+                android:textColor="@android:color/black"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="28dp"
+                android:layout_marginTop="50dp" />
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
-    <Button
-        android:text="@string/create_event_btn_text"
-        android:onClick="createEventButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/create_even_new_btn"
-        android:layout_below="@+id/new_event_horzlayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="57dp"
-        android:background="#1bcc00"
-        android:textSize="25sp"
-        android:textColor="@android:color/black" />
-
-    <TextView
-        android:text="@string/create_new_event_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/create_new_event_id"
-        android:textSize="40sp"
-        android:textColor="@android:color/black"
-        android:textAlignment="center"
-        android:textStyle="normal|bold"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="21dp" />
 </RelativeLayout>
