@@ -2,9 +2,12 @@ package com.example.jkast.myapplication;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 /**
  * Created by Vance Field III on 12/5/2016.
@@ -109,14 +112,67 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return successfulInsertion;
     }
 
-
-    public String getPasswordForUser(String username){
-        String select = "select * from Users where Username = '" + username + "'";
-        String password = "jolly";
+    public String getNameForEvent(int EventID){
+        String select = "select * from Events where EventID = '" + EventID + "'";
+        String name = "jolly";
         Cursor c = db.rawQuery(select, null);
         if(c.moveToFirst()) {
             do{
-                //password = c.getString(c.getColumnIndex())
+                name = c.getString(c.getColumnIndex("Name"));
+            } while(c.moveToNext());
+        }
+        c.close();
+        return name;
+    }
+
+    //gets first item in EVENTS table
+    public int getMinEventID(){
+        String select = "SELECT * FROM Events LIMIT 1";
+        int MIN = 0;
+        Cursor c = db.rawQuery(select, null);
+        if(c.moveToFirst()) {
+            do{
+                MIN = c.getInt(c.getColumnIndex("EventID"));
+            } while(c.moveToNext());
+        }
+        c.close();
+        return MIN;
+    }
+
+    //gets last item in EVENTS table
+    public int getMaxEventID() {
+        String select = "SELECT * FROM Events ORDER BY EventID DESC LIMIT 1";
+        int MAX = 0;
+        Cursor c = db.rawQuery(select, null);
+        if(c.moveToFirst()) {
+            do{
+                MAX = c.getInt(c.getColumnIndex("EventID"));
+            } while(c.moveToNext());
+        }
+
+        //MAX = 116;
+        return MAX;
+    }
+    /*public int getMaxEventID(){
+        String select = "SELECT * FROM Events LIMIT 1";
+        int MAX = 0;
+        Cursor c = db.rawQuery(select, null);
+        if(c.moveToFirst()) {
+            do{
+                MAX = c.getInt(c.getColumnIndex("EventID"));
+            } while(c.moveToNext());
+        }
+        c.close();
+        return MAX;
+    }*/
+
+    //gets password from Users table
+    public String getPasswordForUser(String username){
+        String select = "select * from Users where Username = '" + username + "'";
+        String password = "null";
+        Cursor c = db.rawQuery(select, null);
+        if(c.moveToFirst()) {
+            do{
                 password = c.getString(c.getColumnIndex("Password"));
             } while(c.moveToNext());
         }
