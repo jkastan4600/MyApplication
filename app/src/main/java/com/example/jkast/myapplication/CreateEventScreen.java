@@ -24,7 +24,6 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
     EditText eventLocation;
     EditText eventDetails;
     EditText eventCapacity;
-    EditText eventCategory;
     Button createEventButton;
 
     private Spinner spinner;
@@ -59,11 +58,10 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
         eventDate = (EditText)findViewById(R.id.create_event_date);
         eventTime = (EditText)findViewById(R.id.create_event_time);
         Bundle bundle = getIntent().getExtras();
-        eventCreatedBy = bundle.getString("email2");// need to fix
+        eventCreatedBy = bundle.getString("email2");
         eventLocation = (EditText)findViewById(R.id.create_event_location);
-        eventDetails = (EditText)findViewById(R.id.create_event_description);         // need to fix
-        eventCapacity = (EditText)findViewById(R.id.create_event_capacity);       // need to fix
-        //eventCategory = (EditText)findViewById(R.id.category_spinner);            // need to fix
+        eventDetails = (EditText)findViewById(R.id.create_event_description);
+        eventCapacity = (EditText)findViewById(R.id.create_event_capacity);
         createEventButton = (Button)findViewById(R.id.create_even_new_btn);
 
         // call action performed-type method

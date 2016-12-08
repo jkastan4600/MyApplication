@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
                         editFirstName.getText().toString(),
                         editLastName.getText().toString(),
                         editPassword.getText().toString() );
+                String getrec = editUsername.getText().toString();
+                Bundle bundle = new Bundle();
+                bundle.putString("email", getrec);
+                accCreatedIntent.putExtras(bundle);
                 if(isInserted){
                     makeText(MainActivity.this,"Account successfully created.", Toast.LENGTH_LONG).show();
                     startActivity(accCreatedIntent) ;// switches to my likes

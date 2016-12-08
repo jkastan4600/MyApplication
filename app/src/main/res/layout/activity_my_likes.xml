@@ -496,7 +496,6 @@
 
             <Button
                 android:text="@string/set_my_likes_text"
-                android:onClick="switchToMainMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/set_likes_btn"

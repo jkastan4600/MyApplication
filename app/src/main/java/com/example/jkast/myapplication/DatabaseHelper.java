@@ -17,13 +17,13 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     public static final String USERS_TABLE = "Users";
     public static final String EVENTS_TABLE = "Events";
+    public static final String USERLIKES_TABLE = "UserLikes";
 
     public static final String USERS_COL_1 = "Username";
     public static final String USERS_COL_2 = "FirstName";
     public static final String USERS_COL_3 = "LastName";
     public static final String USERS_COL_4 = "Password";
 
-    public static final String EVENTS_COL_1 = "EventID";
     public static final String EVENTS_COL_2 = "Name";
     public static final String EVENTS_COL_3 = "Date";
     public static final String EVENTS_COL_4 = "Time";
@@ -32,6 +32,10 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public static final String EVENTS_COL_7 = "Details";
     public static final String EVENTS_COL_8 = "Capacity";
     public static final String EVENTS_COL_9 = "Category";
+
+    public static final String USERLIKES_COL_1 = "Username";
+    public static final String USERLIKES_COL_2 = "Category";
+
 
 
     public DatabaseHelper(Context context) {
@@ -109,14 +113,17 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return successfulInsertion;
     }
 
-
+    /**
+     * Retrieves the password for the user
+     * @param username the users username
+     * @return the users password
+     */
     public String getPasswordForUser(String username){
         String select = "select * from Users where Username = '" + username + "'";
         String password = "jolly";
         Cursor c = db.rawQuery(select, null);
         if(c.moveToFirst()) {
             do{
-                //password = c.getString(c.getColumnIndex())
                 password = c.getString(c.getColumnIndex("Password"));
             } while(c.moveToNext());
         }
@@ -124,19 +131,37 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return password;
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        System.out.println("DATABASEHELPER onCreate()");
-        //db.
-        //db.execSQL("create table " + USERS_TABLE + "(UID INTEGER PRIMARY KEY AUTOINCREMENT, FirstName TEXT, LastName TEXT, Username TEXT, Password TEXT)");
-        //db.execSQL("create table " + EVENTS_TABLE + "(Name TEXT PRIMARY KEY, Date DATETIME PRIMARY KEY, Time DATETIME PRIMARY KEY, CreatedBy TEXT, Location TEXT, Details TEXT, Capacity INTEGER, Category TEXT)");
+    /**
+     * Creates a row that represents a user and his/her like
+     * @param username the users username
+     * @param category the users like
+     * @return whether or not the insertion was successful
+     */
+    public boolean insertUserLikes(String username, String category){
+        boolean successfulInsertion = false; // whether the insertion is successful
+        ContentValues contentValues = new ContentValues(); // must do this each time
+
+        // insert the data of the user into each column
+        contentValues.put(USERLIKES_COL_1,username); // (the column, the data)
+        contentValues.put(USERLIKES_COL_2,category);
+
+        long val = db.insert(USERLIKES_TABLE, null, contentValues); // (table name, null, the contentValues)
+        if(val == -1){ // if unsuccessful
+            successfulInsertion = false;
+        }
+        else { // if successful
+            successfulInsertion = true;
+        }
+        return successfulInsertion;
     }
 
+
+
+
+
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        System.out.println("DATABASEHELPER onUpgrade()");
-        //db.execSQL("DROP TABLE IF EXISTS " + USERS_TABLE);
-        //db.execSQL("DROP TABLE IF EXISTS " + EVENTS_TABLE);
-        //onCreate(db);
-    }
+    public void onCreate(SQLiteDatabase db) {}
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
 }
