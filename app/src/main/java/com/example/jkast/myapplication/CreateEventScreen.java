@@ -15,7 +15,7 @@ import static android.widget.Toast.makeText;
 
 public class CreateEventScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    LoginActivity loginActivity;
+    LoginActivity loginActivity = new LoginActivity();
     DatabaseHelper dbh;
     EditText eventName, eventDate, eventTime, eventCreatedBy, eventLocation, eventDetails,
             eventCapacity, eventCategory;
@@ -46,7 +46,7 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
         spinner.setOnItemSelectedListener(this);
 
         dbh = new DatabaseHelper(this);
-        loginActivity = new LoginActivity();
+
 
         // cast components
         eventName = (EditText)findViewById(R.id.enter_event_name);
@@ -103,6 +103,7 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
                         spinner.getSelectedItem().toString() // col_9 category
                 );
                 if(isInserted){
+                    System.out.println("THE USERNAME IS: " + loginActivity.getUsername());
                     makeText(CreateEventScreen.this,"Your event has been created.", Toast.LENGTH_LONG).show();
                     startActivity(createEventIntent);
                 }
