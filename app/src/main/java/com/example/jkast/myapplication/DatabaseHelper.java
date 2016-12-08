@@ -9,6 +9,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 /**
  * Created by Vance Field III on 12/5/2016.
  */
@@ -311,10 +313,21 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return successfulInsertion;
     }
 
-    public String[] getAllUserLikes(String username){
-        String[] likes = {};
+    public ArrayList getAllUserLikes(String username){
+        ArrayList list = new ArrayList();
+        String like = "";
         String select = "select * from UserLikes where Username = '" + username + "'";
-        return likes;
+        Cursor c = db.rawQuery(select, null);
+
+        if(c.moveToFirst()) {
+            do{
+                like = c.getString(c.getColumnIndex("Category"));
+                list.add(like);
+            } while(c.moveToNext());
+        }
+
+        c.close();
+        return list;
     }
 
     @Override

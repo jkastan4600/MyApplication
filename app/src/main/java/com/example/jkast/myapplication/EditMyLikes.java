@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +21,6 @@ public class EditMyLikes extends AppCompatActivity {
     DatabaseHelper dbh;
     Bundle bundle;
     List<CheckBox> checkboxList;
-    List<CheckBox> selectedList;
     CheckBox Animals, Agriculture, Archaeology, ArtsCrafts,
             Architecture, Aviation, Biology, BirdWatching, Bombs, Books, Collecting,
             Competition, Crime, Culture, CurrentEvents, Dance, Dating, Doctors,
@@ -39,14 +39,19 @@ public class EditMyLikes extends AppCompatActivity {
         dbh = new DatabaseHelper(this);
         myLikesObj = new MyLikes();
         username = "";
+        ArrayList list;
         bundle = getIntent().getExtras();
         backToLogin = (Button) findViewById(R.id.set_likes_btn);
         checkboxList = myLikesObj.getCheckboxList(); // represents a list of all checkboxes
 
         // get all user likes
-        //dbh.getAllUserLikes(username)
-        Animals = (CheckBox)findViewById(R.id.animals);
-        Animals.setChecked(true);
+        list = dbh.getAllUserLikes(username);
+        for(int i = 0; i < list.size(); i++){
+            System.out.println("alluserLikes["+i+"]" + list.get(i));
+        }
+
+        //Animals = (CheckBox)findViewById(R.id.animals);
+        //Animals.setChecked(true);
         actionPerformed();
     }
 
