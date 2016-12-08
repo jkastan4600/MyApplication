@@ -10,4 +10,75 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jkast.myapplication.EventDetails">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventdetails"
+            android:layout_weight="0.13"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:textSize="48sp"
+            android:drawableBottom="@android:drawable/divider_horizontal_textfield"
+            android:text="@string/event_details_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventname"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:textStyle="normal|italic"
+            android:padding="10dp"
+            android:drawableBottom="@android:drawable/divider_horizontal_textfield"
+            android:layout_weight="0.13" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventdescription"
+            android:layout_weight="0.13"
+            android:textSize="22sp"
+            android:lineSpacingExtra="2sp"
+            android:drawableBottom="@android:drawable/divider_horizontal_textfield"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:id="@+id/eventlocation"
+            android:textSize="18sp"
+            android:lineSpacingExtra="8sp"
+            android:paddingTop="15dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventdateandtime"
+            android:layout_weight="0.13"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventcreator"
+            android:layout_weight="0.13"
+            android:textAlignment="center" />
+
+        <Button
+            android:text="@string/attend1_button"
+            android:onClick="attendButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_to_attend_event"
+            android:layout_weight="0.13"
+            android:background="#1bcc00"
+            android:textStyle="normal|bold"
+            android:textSize="26sp" />
+    </LinearLayout>
 </RelativeLayout>
