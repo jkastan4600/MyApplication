@@ -312,34 +312,43 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         }
         return successfulInsertion;
     }
-    public String getEventAttendee(int EventID){
+
+    /**
+     * Returns an attendee from the requested event
+     * @param EventID the events event id
+     * @return the attendee
+     */
+    public String getEventAttendee(int EventID) {
         String select = "select * from EventAtendees where EventID = '" + EventID + "'";
         String name = "invalid";
         Cursor c = db.rawQuery(select, null);
-        if(c.moveToFirst()) {
-            do{
+        if (c.moveToFirst()) {
+            do {
                 name = c.getString(c.getColumnIndex("Atendee"));
-            } while(c.moveToNext());
+            } while (c.moveToNext());
         }
         c.close();
         return name;
+    }
 
-    public ArrayList getAllUserLikes(String username){
+    public ArrayList getAllUserLikes(String username) {
         ArrayList list = new ArrayList();
         String like = "";
         String select = "select * from UserLikes where Username = '" + username + "'";
         Cursor c = db.rawQuery(select, null);
 
-        if(c.moveToFirst()) {
-            do{
+        if (c.moveToFirst()) {
+            do {
                 like = c.getString(c.getColumnIndex("Category"));
                 list.add(like);
-            } while(c.moveToNext());
+            } while (c.moveToNext());
         }
 
         c.close();
         return list;
     }
+
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {}
