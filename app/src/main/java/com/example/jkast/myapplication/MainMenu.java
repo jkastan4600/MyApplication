@@ -15,8 +15,8 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        myLikes = (Button) findViewById(R.id.mm_mylikes_edit);
-        actionPerformed();
+        //myLikes = (Button) findViewById(R.id.mm_mylikes_edit);
+        //actionPerformed();
     }
 
 
@@ -75,13 +75,19 @@ public class MainMenu extends AppCompatActivity {
 
     }
 
-    public void actionPerformed() {
-        final Intent myLikesIntent = new Intent(this,EditMyLikes.class);
-        myLikes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(myLikesIntent);
-            }
-        });
+    public void editMyLikes(View view){
+        Intent createNewEventIntent = new Intent(this,EditMyLikes.class);
+        //Get the bundle
+        Bundle bundle = getIntent().getExtras();
+        //Extract the data…
+        String stuff = bundle.getString("email");
+        //Create the bundle
+        Bundle bundle2 = new Bundle();
+        //Add your data to bundle
+        bundle2.putString("email2", stuff);
+        //Add the bundle to the intent
+        createNewEventIntent.putExtras(bundle2);
+        // switches to create new event
+        startActivity(createNewEventIntent);
     }
 }

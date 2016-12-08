@@ -216,34 +216,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return name;
     }
 
-    //gets first item in EVENTS table
-    public int getMinEventID(){
-        String select = "SELECT * FROM Events LIMIT 1";
-        int MIN = 0;
-        Cursor c = db.rawQuery(select, null);
-        if(c.moveToFirst()) {
-            do{
-                MIN = c.getInt(c.getColumnIndex("EventID"));
-            } while(c.moveToNext());
-        }
-        c.close();
-        return MIN;
-    }
 
-    //gets last item in EVENTS table
-    public int getMaxEventID() {
-        String select = "SELECT * FROM Events ORDER BY EventID DESC LIMIT 1";
-        int MAX = 0;
-        Cursor c = db.rawQuery(select, null);
-        if(c.moveToFirst()) {
-            do{
-                MAX = c.getInt(c.getColumnIndex("EventID"));
-            } while(c.moveToNext());
-        }
-
-        //MAX = 116;
-        return MAX;
-    }
 
     /**
      * Retrieves the password for the user
@@ -323,10 +296,71 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return name;
     }
 
+    //gets first item in EVENTS table
+    public int getMinEventID(){
+        String select = "SELECT * FROM Events LIMIT 1";
+        int MIN = 0;
+        Cursor c = db.rawQuery(select, null);
+        if(c.moveToFirst()) {
+            do{
+                MIN = c.getInt(c.getColumnIndex("EventID"));
+            } while(c.moveToNext());
+        }
+        c.close();
+        return MIN;
+    }
+
+    //gets last item in EVENTS table
+    public int getMaxEventID() {
+        String select = "SELECT * FROM Events ORDER BY EventID DESC LIMIT 1";
+        int MAX = 0;
+        Cursor c = db.rawQuery(select, null);
+        if(c.moveToFirst()) {
+            do{
+                MAX = c.getInt(c.getColumnIndex("EventID"));
+            } while(c.moveToNext());
+        }
+        c.close();
+        //MAX = 116;
+        return MAX;
+    }
+
+    public String getUserLikesName(int EventID){
+        String select = "select * from UserLikes where UserLikesID = '" + EventID + "'";
+        String name = "invalid";
+        Cursor c = db.rawQuery(select, null);
+        if(c.moveToFirst()) {
+            do{
+                name = c.getString(c.getColumnIndex("Username"));
+            } while(c.moveToNext());
+        }
+        c.close();
+        return name;
+    }
+
+    public String getUserLikesCategory(int EventID){
+        String select = "select * from UserLikes where UserLikesID = '" + EventID + "'";
+        String name = "invalid";
+        Cursor c = db.rawQuery(select, null);
+        if(c.moveToFirst()) {
+            do{
+                name = c.getString(c.getColumnIndex("Category"));
+            } while(c.moveToNext());
+        }
+        c.close();
+        return name;
+    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {}
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
+
+
+    public void removeAllUserLikes(String username) {
+        System.out.println("REMOVING ALL OF " + username + " LIKES");
+        String delete = "delete from UserLikes where Username = '" + username + "'";
+        db.execSQL(delete);
+    }
 }
