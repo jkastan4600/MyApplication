@@ -23,6 +23,17 @@ public class MainMenu extends AppCompatActivity {
 
     public void findEventsButton(View view){
         Intent findEventsButton = new Intent(this,FindEvents.class); // switches to Find Events
+        //Get the bundle
+        Bundle bundle = getIntent().getExtras();
+        //Extract the data…
+        String stuff = bundle.getString("email");
+        //Create the bundle
+        Bundle bundle2 = new Bundle();
+        //Add your data to bundle
+        bundle2.putString("email2", stuff);
+        //Add the bundle to the intent
+        findEventsButton.putExtras(bundle2);
+        // switches to create new event
         startActivity(findEventsButton);
     }
 
@@ -35,9 +46,9 @@ public class MainMenu extends AppCompatActivity {
         //Create the bundle
         Bundle bundle2 = new Bundle();
         //Add your data to bundle
-        bundle.putString("email2", stuff);
+        bundle2.putString("email2", stuff);
         //Add the bundle to the intent
-        createNewEventIntent.putExtras(bundle);
+        createNewEventIntent.putExtras(bundle2);
         // switches to create new event
         startActivity(createNewEventIntent);
     }
