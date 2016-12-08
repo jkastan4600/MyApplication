@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit_my_likes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jkast.myapplication.EditMyLikes">
+
+    <TextView
+        android:text="@string/my_likes_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mylikesview"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:textStyle="normal|bold"
+        android:textAlignment="center" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mylikesview"
+        android:id="@+id/my_likes_scrollview"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:text="@string/animals_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/animals"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/archaeology_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/archaeology"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="Architecture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/architecture"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:text="@string/biology_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Biology"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/books_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Books"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:text="@string/competition_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Competition"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/culture_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Culture"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/current_events_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/CurrentEvents"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/dating_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Dating"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/disease_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Disease"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/drama_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Drama"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/economics_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Economics"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/engineering_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Engineering"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/fitness_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Fitness"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/flowers_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Flowers"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/fund_raising_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/FundRaising"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/gardens_gardening_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/GardensGardening"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/government_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Government"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/health_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Health"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/hobbies_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Hobbies"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/investing_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Investing"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/lunch_outings_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/LunchOutings"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/military_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Military"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/movies_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Movies"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/nature_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Nature"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/politics_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Politics"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/sports_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Sports"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/technology_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Technology"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/the_colonnades_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/TheColonnades"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/uva_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/UVA"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/weather_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Weather"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:text="@string/agriculture_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/agriculture"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/arts_crafts_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/artsandcrafts"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/aviation_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/aviation"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/bird_watching_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/BirdWatching"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/bombs_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Bombs"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/collecting_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Collecting"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/crime_true_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Crime"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/dance_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Dance"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/dermatology_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Dermatology"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/doctors_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Doctors"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/ecology_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Ecology"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/education_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Education"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/evolution_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Evolution"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/flags_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Flags"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/food_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Food"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/games_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Games"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/geography_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Geography"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/guns_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Guns"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/history_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/History"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/insects_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Insects"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/law_enforcement_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/LawEnforcement"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/medicine_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Medicine"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/magic_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Magic"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/music_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Music"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/parties_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Parties"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/religion_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Religion"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/sight_seeing_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/SightSeeing"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/theater_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Theater"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/travel_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Travel"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/volunteering_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Volunteering"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/wine_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Wine"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:text="@string/writing_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Writing"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:text="@string/set_my_likes_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/set_likes_btn"
+                android:textSize="30sp"
+                android:layout_below="@+id/my_likes_scrollview"
+                android:elevation="10dp"
+                android:background="#1bcc00" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

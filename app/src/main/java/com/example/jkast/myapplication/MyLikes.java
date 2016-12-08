@@ -194,11 +194,13 @@ public class MyLikes extends AppCompatActivity {
 
                 // insert user's likes into UserLikes table
                 username = bundle.getString("email");
-
-                boolean isInserted = dbh.insertUserLikes(
-                        username, // col_1 username
-                        selectedList.get(0).getText().toString() // col_2 category
-                );
+                boolean isInserted = false;
+                for(int i = 0; i < selectedList.size(); i++) {
+                     isInserted = dbh.insertUserLikes(
+                            username, // col_1 username
+                            selectedList.get(i).getText().toString() // col_2 category
+                    );
+                }
 
                 if (isInserted) {
                     makeText(MyLikes.this, "Account created. Now try logging in.", Toast.LENGTH_LONG).show();
@@ -210,6 +212,14 @@ public class MyLikes extends AppCompatActivity {
 
             }
         });
+    }
+
+    /**
+     * Returns the checkboxList
+     * @return the checkboxList
+     */
+    public List<CheckBox> getCheckboxList(){
+        return checkboxList;
     }
 
 }
