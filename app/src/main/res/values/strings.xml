@@ -114,8 +114,8 @@
     <string name="date_format_hint_text">(xx/xx/xx)</string>
     <string name="time_hint_text">(xx:xx(am/pm))</string>
     <string name="create_event_btn_text">Create Event</string>
-    <string name="event_description_text">Description</string>
+    <string name="event_description_text"><u>Description</u></string>
     <string name="hint_for_capactiy">Max # of Guests</string>
-    <string name="event_capactiy">Capactiy</string>
+    <string name="event_capactiy"><u>Capactiy</u></string>
 
 </resources>
