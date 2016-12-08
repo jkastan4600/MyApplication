@@ -15,7 +15,7 @@ import static android.widget.Toast.makeText;
 
 public class CreateEventScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    LoginActivity loginActivity;
+    LoginActivity loginActivity = new LoginActivity();
     DatabaseHelper dbh;
     EditText eventName;
     EditText eventDate;
@@ -52,7 +52,7 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
         spinner.setOnItemSelectedListener(this);
 
         dbh = new DatabaseHelper(this);
-        loginActivity = new LoginActivity();
+
 
         // cast components
         eventName = (EditText)findViewById(R.id.enter_event_name);
