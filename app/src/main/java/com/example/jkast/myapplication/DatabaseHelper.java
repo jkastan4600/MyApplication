@@ -310,7 +310,18 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         }
         return successfulInsertion;
     }
-
+    public String getEventAttendee(int EventID){
+        String select = "select * from EventAtendees where EventID = '" + EventID + "'";
+        String name = "invalid";
+        Cursor c = db.rawQuery(select, null);
+        if(c.moveToFirst()) {
+            do{
+                name = c.getString(c.getColumnIndex("Atendee"));
+            } while(c.moveToNext());
+        }
+        c.close();
+        return name;
+    }
 
 
     @Override

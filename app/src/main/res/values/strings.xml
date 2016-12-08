@@ -117,5 +117,6 @@
     <string name="event_description_text"><u>Description</u></string>
     <string name="hint_for_capactiy">Max # of Guests</string>
     <string name="event_capactiy"><u>Capactiy</u></string>
+    <string name="my_events_screen"><u>My Events</u></string>
 
 </resources>
