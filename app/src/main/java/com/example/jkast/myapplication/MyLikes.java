@@ -195,6 +195,7 @@ public class MyLikes extends AppCompatActivity {
                 // insert user's likes into UserLikes table
                 username = bundle.getString("email");
                 boolean isInserted = false;
+                // insert
                 for(int i = 0; i < selectedList.size(); i++) {
                      isInserted = dbh.insertUserLikes(
                             username, // col_1 username

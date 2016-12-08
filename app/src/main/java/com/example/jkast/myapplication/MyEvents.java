@@ -29,7 +29,7 @@ public class MyEvents extends AppCompatActivity {
         while(incTable <= MAX) {
             Bundle bundle1 = getIntent().getExtras();
             //Extract the data…
-            String EMAILofUSER = bundle1.getString("email2");
+            String EMAILofUSER = bundle1.getString("email");
             String createdBYUSER = DH.getEventCreator(incTable);
             String attendeeUSER = DH.getEventAttendee(incTable);
             if (EMAILofUSER.equals(createdBYUSER) || EMAILofUSER.equals(attendeeUSER)) {
@@ -53,7 +53,7 @@ public class MyEvents extends AppCompatActivity {
                     ///////////////////
                     Bundle bundle1 = getIntent().getExtras();
                     //Extract the data…
-                    String stuff2 = bundle1.getString("email2");
+                    String stuff2 = bundle1.getString("email");
                     //Create the bundle
                     Bundle bundle2 = new Bundle();
                     //Add your data to bundle

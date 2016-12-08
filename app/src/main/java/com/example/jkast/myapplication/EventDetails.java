@@ -56,7 +56,7 @@ public class EventDetails extends AppCompatActivity {
             public void onClick(View view) {
                 Bundle bundle2 = getIntent().getExtras();
                 int UIDofEvent = bundle2.getInt("eventUIDfromFind");
-                username = bundle2.getString("emailEventdetails");
+                username = bundle2.getString("email");
                 Bundle bundle1 = new Bundle();
                 //Add your data to bundle
                 bundle1.putString("email", username);

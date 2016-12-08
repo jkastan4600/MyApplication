@@ -51,11 +51,11 @@ public class FindEvents extends AppCompatActivity {
                     ///////////////////
                     Bundle bundle1 = getIntent().getExtras();
                     //Extract the data…
-                    String stuff2 = bundle1.getString("email2");
+                    String stuff2 = bundle1.getString("email");
                     //Create the bundle
                     Bundle bundle2 = new Bundle();
                     //Add your data to bundle
-                    bundle2.putString("emailEventdetails", stuff2);
+                    bundle2.putString("email", stuff2);
                     bundle2.putInt("eventUIDfromFind", finalIncTable);
                     //Add the bundle to the intent
                     createEventDetailsIntent.putExtras(bundle2);

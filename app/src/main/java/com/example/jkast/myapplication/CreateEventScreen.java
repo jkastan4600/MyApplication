@@ -54,11 +54,17 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
 
 
         // cast components
+        final Intent createEventIntent1 = new Intent(this,MainMenu.class); // switches to it main menu
         eventName = (EditText)findViewById(R.id.enter_event_name);
         eventDate = (EditText)findViewById(R.id.create_event_date);
         eventTime = (EditText)findViewById(R.id.create_event_time);
         Bundle bundle = getIntent().getExtras();
-        eventCreatedBy = bundle.getString("email2");
+        eventCreatedBy = bundle.getString("email");
+        Bundle bundle2 = new Bundle();
+        //Add your data to bundle
+        bundle2.putString("email", eventCreatedBy);
+        //Add the bundle to the intent
+        createEventIntent1.putExtras(bundle2);
         eventLocation = (EditText)findViewById(R.id.create_event_location);
         eventDetails = (EditText)findViewById(R.id.create_event_description);
         eventCapacity = (EditText)findViewById(R.id.create_event_capacity);
@@ -82,6 +88,7 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
 
     public void actionPerformed(){
         final Intent createEventIntent = new Intent(this,MainMenu.class); // switches to it main menu
+
         createEventButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -90,11 +97,17 @@ public class CreateEventScreen extends AppCompatActivity implements AdapterView.
                         eventDate.getText().toString(), // col_3 date
                         eventTime.getText().toString(), // col_4 time
                         eventCreatedBy, // col_5 createdBy
+
                         eventLocation.getText().toString(), // col_6 location
                         eventDetails.getText().toString(), // col_7 details
                         Integer.parseInt(eventCapacity.getText().toString()), // col_8 capacity
                         spinner.getSelectedItem().toString() // col_9 category
                 );
+                Bundle bundle3 = new Bundle();
+                //Add your data to bundle
+                bundle3.putString("email", eventCreatedBy);
+                //Add the bundle to the intent
+                createEventIntent.putExtras(bundle3);
                 if(isInserted){
                     makeText(CreateEventScreen.this,"Your event has been created.", Toast.LENGTH_LONG).show();
                     startActivity(createEventIntent);

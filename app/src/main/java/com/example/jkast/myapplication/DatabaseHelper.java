@@ -292,16 +292,16 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     /**
      * Creates a row that represents a user attending an event
      * @param eventID the event ID
-     * @param atendee the event atendee
+     * @param attendee the event attendee
      * @return whether or not the insertion was successful
      */
-    public boolean insertEventAtendee(int eventID, String atendee){
+    public boolean insertEventAtendee(int eventID, String attendee){
         boolean successfulInsertion = false; // whether the insertion is successful
         ContentValues contentValues = new ContentValues(); // must do this each time
 
         // insert the data of the user into each column
         contentValues.put(EVENTATENDEE_COL_1,eventID); // (the column, the data)
-        contentValues.put(EVENTATENDEE_COL_2,atendee);
+        contentValues.put(EVENTATENDEE_COL_2,attendee);
 
         long val = db.insert(EVENTATENDEES_TABLE, null, contentValues); // (table name, null, the contentValues)
         if(val == -1){ // if unsuccessful
@@ -322,37 +322,53 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         String select = "select * from EventAtendees where EventID = '" + EventID + "'";
         String name = "invalid";
         Cursor c = db.rawQuery(select, null);
-        if (c.moveToFirst()) {
-            do {
+        if(c.moveToFirst()) {
+            do{
                 name = c.getString(c.getColumnIndex("Atendee"));
-            } while (c.moveToNext());
+            } while(c.moveToNext());
         }
         c.close();
         return name;
     }
 
-    public ArrayList getAllUserLikes(String username) {
-        ArrayList list = new ArrayList();
-        String like = "";
-        String select = "select * from UserLikes where Username = '" + username + "'";
+
+
+    public String getUserLikesName(int EventID){
+        String select = "select * from UserLikes where UserLikesID = '" + EventID + "'";
+        String name = "invalid";
         Cursor c = db.rawQuery(select, null);
-
-        if (c.moveToFirst()) {
-            do {
-                like = c.getString(c.getColumnIndex("Category"));
-                list.add(like);
-            } while (c.moveToNext());
+        if(c.moveToFirst()) {
+            do{
+                name = c.getString(c.getColumnIndex("Username"));
+            } while(c.moveToNext());
         }
-
         c.close();
-        return list;
+        return name;
     }
 
-
+    public String getUserLikesCategory(int EventID){
+        String select = "select * from UserLikes where UserLikesID = '" + EventID + "'";
+        String name = "invalid";
+        Cursor c = db.rawQuery(select, null);
+        if(c.moveToFirst()) {
+            do{
+                name = c.getString(c.getColumnIndex("Category"));
+            } while(c.moveToNext());
+        }
+        c.close();
+        return name;
+    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {}
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
+
+
+    public void removeAllUserLikes(String username) {
+        System.out.println("REMOVING ALL OF " + username + " LIKES");
+        String delete = "delete from UserLikes where Username = '" + username + "'";
+        db.execSQL(delete);
+    }
 }
