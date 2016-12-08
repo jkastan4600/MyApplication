@@ -185,7 +185,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
 
         if(!password.equals(dbh.getPasswordForUser(username))){
-            mEmailView.setError("Password incorrect");
+            mPasswordView.setError("Username or password incorrect.");
+            focusView = mPasswordView;
             cancel = true;
         }
 
@@ -323,11 +324,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             } catch (InterruptedException e) {
                 return false;
             }
-
-            // THIS IS WHERE WE AUTH ACCOUNTS
-            System.out.println("PASSWORD IS: " + dbh.getPasswordForUser(mEmail));
-
-
 
             for (String credential : DUMMY_CREDENTIALS) {
                 String[] pieces = credential.split(":");
