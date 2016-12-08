@@ -49,7 +49,7 @@ public class EventDetails extends AppCompatActivity {
     }
 
     public void actionPerformed(){
-        final Intent eventAttended = new Intent(this,FindEvents.class); // intent to return to menu
+        final Intent eventAttended = new Intent(this,MainMenu.class); // intent to return to menu
 
         attendButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -57,6 +57,11 @@ public class EventDetails extends AppCompatActivity {
                 Bundle bundle2 = getIntent().getExtras();
                 int UIDofEvent = bundle2.getInt("eventUIDfromFind");
                 username = bundle2.getString("emailEventdetails");
+                Bundle bundle1 = new Bundle();
+                //Add your data to bundle
+                bundle1.putString("email", username);
+                //Add the bundle to the intent
+                eventAttended.putExtras(bundle1);
 
                 boolean isInserted = DH.insertEventAtendee(UIDofEvent, username);
 
@@ -69,6 +74,8 @@ public class EventDetails extends AppCompatActivity {
                     makeText(EventDetails.this,"Cannot attend event.", Toast.LENGTH_LONG).show();
 
                 }
+
+
             }
         });
     }
