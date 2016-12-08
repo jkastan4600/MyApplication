@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.Loader;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -40,6 +41,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     public String username = "T";
     public EditText usernameText;
+    DatabaseHelper dbh;
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -48,7 +50,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     /**
      * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
             "foo@example.com:hello", "bar@example.com:world"
@@ -68,6 +69,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        dbh = new DatabaseHelper(this);
+
+
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.username);
         populateAutoComplete();
@@ -179,6 +184,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             cancel = true;
         }
 
+        if(!password.equals(dbh.getPasswordForUser(username))){
+            mEmailView.setError("Password incorrect");
+            cancel = true;
+        }
+
         if (cancel) {
             // There was an error; don't attempt login and focus the first
             // form field with an error.
@@ -193,13 +203,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     private boolean isEmailValid(String username) {
-        //TODO: Replace this with your own logic
         //return email.contains("@");
         return true;
     }
 
     private boolean isPasswordValid(String password) {
-        //TODO: Replace this with your own logic
         return password.length() > 4;
     }
 
@@ -301,7 +309,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         private final String mEmail;
         private final String mPassword;
-
         UserLoginTask(String email, String password) {
             mEmail = email;
             mPassword = password;
@@ -318,6 +325,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
 
             // THIS IS WHERE WE AUTH ACCOUNTS
+            System.out.println("PASSWORD IS: " + dbh.getPasswordForUser(mEmail));
+
+
 
             for (String credential : DUMMY_CREDENTIALS) {
                 String[] pieces = credential.split(":");

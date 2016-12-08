@@ -2,6 +2,7 @@ package com.example.jkast.myapplication;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -109,11 +110,24 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
 
-
+    public String getPasswordForUser(String username){
+        String select = "select * from Users where Username = '" + username + "'";
+        String password = "jolly";
+        Cursor c = db.rawQuery(select, null);
+        if(c.moveToFirst()) {
+            do{
+                //password = c.getString(c.getColumnIndex())
+                password = c.getString(c.getColumnIndex("Password"));
+            } while(c.moveToNext());
+        }
+        c.close();
+        return password;
+    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         System.out.println("DATABASEHELPER onCreate()");
+        //db.
         //db.execSQL("create table " + USERS_TABLE + "(UID INTEGER PRIMARY KEY AUTOINCREMENT, FirstName TEXT, LastName TEXT, Username TEXT, Password TEXT)");
         //db.execSQL("create table " + EVENTS_TABLE + "(Name TEXT PRIMARY KEY, Date DATETIME PRIMARY KEY, Time DATETIME PRIMARY KEY, CreatedBy TEXT, Location TEXT, Details TEXT, Capacity INTEGER, Category TEXT)");
     }
