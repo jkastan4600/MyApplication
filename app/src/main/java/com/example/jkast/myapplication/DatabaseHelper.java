@@ -371,4 +371,10 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         String delete = "delete from UserLikes where Username = '" + username + "'";
         db.execSQL(delete);
     }
+
+    public void unattendEvent(String username, int EventID){
+        System.out.println("REMOVING EVENT FROM " + username + "'s MyEvents");
+        String delete = "delete from MyEvents where Username = '" + username + "' and EventID ='" + EventID + "'";
+        db.execSQL(delete);
+    }
 }
