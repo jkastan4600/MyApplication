@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
+import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -298,12 +299,19 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public boolean insertEventAtendee(int eventID, String attendee){
         boolean successfulInsertion = false; // whether the insertion is successful
         ContentValues contentValues = new ContentValues(); // must do this each time
+        long val = 0;
 
-        // insert the data of the user into each column
-        contentValues.put(EVENTATENDEE_COL_1,eventID); // (the column, the data)
-        contentValues.put(EVENTATENDEE_COL_2,attendee);
+        try {
+            // insert the data of the user into each column
+            contentValues.put(EVENTATENDEE_COL_1, eventID); // (the column, the data)
+            contentValues.put(EVENTATENDEE_COL_2, attendee);
+            val = db.insert(EVENTATENDEES_TABLE, null, contentValues); // (table name, null, the contentValues)
+        } catch (SQLiteConstraintException e) {
+            System.out.println("__HEJ");
+            System.out.println(e.getMessage());
+        }
 
-        long val = db.insert(EVENTATENDEES_TABLE, null, contentValues); // (table name, null, the contentValues)
+
         if(val == -1){ // if unsuccessful
             successfulInsertion = false;
         }

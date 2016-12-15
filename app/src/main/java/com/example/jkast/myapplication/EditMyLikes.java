@@ -71,13 +71,10 @@ public class EditMyLikes extends AppCompatActivity {
         username = stuff2;
         System.out.println("USERNAME IS: " + username);
         // delete all users likes from database
-        DH.removeAllUserLikes(username);
+
         actionPerformed();
 
     }//end on create
-
-
-
 
 
     public void actionPerformed() {
@@ -86,6 +83,7 @@ public class EditMyLikes extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                DH.removeAllUserLikes(username);
                 Intent createEventDetailsIntent = new Intent(EditMyLikes.this,MainMenu.class);
                 bundle1 = getIntent().getExtras();
                 //Extract the data…
